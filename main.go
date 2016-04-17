@@ -1,4 +1,4 @@
-package hello
+package main
 
 import (
     "fmt"
@@ -10,12 +10,12 @@ import (
 )
 
 func init() {
-    http.HandleFunc("/activities", handler)
+    http.HandleFunc("/activities", actHandler)
     http.HandleFunc("/segment", segHandler)
 }
 
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "Hello Thomas!")
+func actHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprint(w, "TODO")
 }
 
 func segHandler(w http.ResponseWriter, r *http.Request) {
